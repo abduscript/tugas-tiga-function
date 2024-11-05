@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>penjumlahan dua angka</title>
+</head>
+<style>
+    body{
+        background: #98ffdf;
+        font-size: 5rem;
+    }
+    .inputWrapper {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    input{
+        width: 5rem;
+        height: 5rem;
+        background: #dbfff3;
+        border-radius: 5px;
+        font-size: 3rem;
+        text-align: center;
+    }
+    button{
+        background: none;
+        border: none;
+        font-size: 5rem;
+    }
+</style>
+<body>
+    <div class="inputWrapper">
+        <div class="input">
+            <input type="number" id="valueSatu">+<input type="number" id="valueDua"><button onclick="jumlahkanDuaAngka()">=</button><span id="hasil"></span>
+        </div>
+    </div>
+<script>
+    function jumlahkanDuaAngka(){
+        let a = parseFloat(document.getElementById('valueSatu').value);
+        let b = parseFloat(document.getElementById('valueDua').value);
+        let total = a + b;
+        document.getElementById('hasil').innerText = total;
+        return total;
+    }
+</script>
+</body>
+</html>
